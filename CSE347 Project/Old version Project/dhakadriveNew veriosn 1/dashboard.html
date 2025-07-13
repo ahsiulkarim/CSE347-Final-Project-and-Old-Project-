@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard - Dhaka Drive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Dhaka Drive</a>
+            <nav id="main-nav">
+                <!-- Nav links will be dynamically inserted here by JS -->
+            </nav>
+        </div>
+    </header>
+
+    <section id="dashboard">
+        <div class="container">
+            <h1 id="welcome-message">Welcome, User!</h1>
+            
+            <div class="dashboard-section">
+                <h2>My Courses</h2>
+                <div id="my-courses-list" class="dashboard-list">
+                    <p>You have not requested any courses yet. <a href="index.html#courses">Explore Courses</a></p>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>Notifications</h2>
+                <div id="notifications-list" class="dashboard-list">
+                    <p>No new notifications.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Multi-Option Payment Modal -->
+    <div id="payment-modal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Complete Enrollment: <span id="modal-course-name">Course</span></h2>
+            <p>Please select your preferred payment method.</p>
+
+            <div class="payment-options">
+                <label><input type="radio" name="payment-method" value="bkash" checked> bKash / MFS</label>
+                <label><input type="radio" name="payment-method" value="card"> Visa/Master Card</label>
+                <label><input type="radio" name="payment-method" value="cash"> Cash on 1st Meet</label>
+            </div>
+
+            <form id="payment-form">
+                <div id="bkash-details" class="payment-details-group">
+                    <p>Send the course fee (e.g., BDT 5000) to the bKash Merchant number below and enter the Transaction ID (TrxID).</p>
+                    <p><strong>bKash Number:</strong> 01712-345678 (Merchant)</p>
+                    <div class="form-group"><label for="trxId">bKash Transaction ID (TrxID)</label><input type="text" id="trxId" placeholder="e.g., 9C4B8A1D3F"></div>
+                </div>
+                <div id="card-details" class="payment-details-group hidden">
+                    <p>This is a simulation. Do not use real card numbers.</p>
+                    <div class="form-group"><label for="cardNumber">Card Number</label><input type="text" id="cardNumber" placeholder="4242 4242 4242 4242"></div>
+                    <div class="form-group-row">
+                        <div class="form-group"><label for="cardExpiry">Expiry (MM/YY)</label><input type="text" id="cardExpiry" placeholder="12/25"></div>
+                        <div class="form-group"><label for="cardCVC">CVC</label><input type="text" id="cardCVC" placeholder="123"></div>
+                    </div>
+                </div>
+                <div id="cash-details" class="payment-details-group hidden">
+                    <p>You have selected to pay in person. Click below to confirm your spot. Our team will coordinate the first class and payment.</p>
+                </div>
+                <button type="submit" class="btn">Confirm Enrollment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
