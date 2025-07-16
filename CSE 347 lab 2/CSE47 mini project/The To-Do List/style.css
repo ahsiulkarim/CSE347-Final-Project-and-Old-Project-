@@ -1,0 +1,92 @@
+/* General styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* The main container for our app */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Styling for the area with the input field and button */
+.input-area {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* The text input field */
+#task-input {
+    flex-grow: 1; /* Allows the input to take up available space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* The 'Add' button */
+#add-task-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745; /* A nice green color */
+    color: white;
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#add-task-button:hover {
+    background-color: #218838; /* A darker green for the hover effect */
+}
+
+/* Styling for the list that holds the tasks */
+#task-list {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for each individual task item in the list */
+.task-item {
+    display: flex;
+    justify-content: space-between; /* Pushes the text and button apart */
+    align-items: center;
+    padding: 10px;
+    background-color: #eee;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* A class we will add with JavaScript when a task is completed */
+.task-item.completed {
+    text-decoration: line-through; /* Puts a line through the text */
+    color: #888;
+    background-color: #e0e0e0;
+}
+
+/* The delete button on each task */
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #dc3545; /* A red color for deletion */
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* A darker red for the hover effect */
+}

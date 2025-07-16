@@ -1,0 +1,102 @@
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* This is the container for each label, input, and error message */
+.form-control {
+    margin-bottom: 20px;
+    position: relative; /* Needed for positioning the error message */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* --- VISUAL FEEDBACK STYLES --- */
+
+/* Style for the input when it's part of a 'success' container */
+.form-control.success input {
+    border-color: #2ecc71; /* Green border */
+}
+
+/* Style for the input when it's part of an 'error' container */
+.form-control.error input {
+    border-color: #e74c3c; /* Red border */
+}
+
+/* The error message text */
+.error-message {
+    color: #e74c3c; /* Red text */
+    font-size: 0.9em;
+    /* We make it invisible by default and show it when there's an error */
+    visibility: hidden; 
+}
+
+/* When the container has the 'error' class, make the message visible */
+.form-control.error .error-message {
+    visibility: visible;
+}
+
+.show-password-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.show-password-container label {
+    margin-left: 5px; /* Add some space between checkbox and label */
+    color: #555;
+    /* We override the 'block' display from the general .form-control label style */
+    display: inline; 
+    margin-bottom: 0;
+}
+
+/* The submit button */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}

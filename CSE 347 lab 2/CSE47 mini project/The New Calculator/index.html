@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <!-- The screen of the calculator where numbers and results are shown -->
+        <div class="display" id="display">0</div>
+
+        <!-- A container for all the buttons, styled as a grid with CSS.
+             The button order here defines the layout in our grid. -->
+        <div class="buttons">
+            <!-- Row 1: New function buttons and the clear button -->
+            <button class="btn function" data-value="(">(</button>
+            <button class="btn function" data-value=")">)</button>
+            <button class="btn function" data-value="%">%</button>
+            <button class="btn operator" data-value="C">C</button> <!-- Moved Clear to top -->
+
+            <!-- Row 2 -->
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="/">÷</button>
+
+            <!-- Row 3 -->
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="*">×</button>
+
+            <!-- Row 4 -->
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="-">-</button>
+            
+            <!-- Row 5 -->
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn equals" data-value="=">=</button>
+            <button class="btn operator" data-value="+">+</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

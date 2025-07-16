@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <!-- Link to our CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My To-Do List</h1>
+        <div class="input-area">
+            <!-- The input field where the user types a new task -->
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <!-- The button the user clicks to add the task -->
+            <button id="add-task-button">Add</button>
+        </div>
+        <!-- This is the unordered list where our tasks will be added by JavaScript -->
+        <ul id="task-list"></ul>
+    </div>
+
+    <!-- Link to our JavaScript file, 'defer' ensures HTML is loaded first -->
+    <script src="script.js" defer></script>
+</body>
+</html>

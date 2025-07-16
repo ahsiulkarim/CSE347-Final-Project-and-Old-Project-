@@ -1,0 +1,93 @@
+/* General styling for the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* The main calculator container */
+.calculator {
+    width: 320px; /* Slightly wider for better spacing */
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #444;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* The calculator display screen */
+.display {
+    width: 100%;
+    background-color: #222;
+    color: white;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* The container for all buttons, set up as a grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* General styling for all buttons */
+.btn {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #666;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #777;
+}
+
+.btn:active { /* Add a visual effect for when a button is clicked */
+    background-color: #555;
+}
+
+/* Special styling for operator buttons */
+.operator {
+    background-color: #f39c12; /* Orange color */
+}
+
+.operator:hover {
+    background-color: #e67e22;
+}
+
+/* --- NEW ---
+   Special styling for the new function buttons (parentheses, percent).
+   We'll make them a lighter gray to distinguish them from numbers. */
+.function {
+    background-color: #a0a0a0;
+    color: #222;
+}
+
+.function:hover {
+    background-color: #b0b0b0;
+}
+
+/* --- MODIFIED ---
+   The 'equals' button no longer needs to span multiple rows
+   in our new, more organized grid layout. */
+.equals {
+    background-color: #2ecc71; /* Green color */
+}
+
+.equals:hover {
+    background-color: #27ae60;
+}

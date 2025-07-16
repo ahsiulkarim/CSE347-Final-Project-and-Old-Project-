@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- The 'novalidate' attribute turns off the browser's default validation,
+             so we can use our own custom JavaScript validation. -->
+        <form id="validation-form" novalidate>
+            <h1>Create Account</h1>
+
+            <!-- Each input group is wrapped in a div.form-control -->
+            <div class="form-control">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+                <!-- This small tag will hold our error message -->
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email">
+                <small class="error-message"></small>
+            </div>
+            
+            <div class="form-control">
+                <label for="phone">Phone Number (1234567890)</label>
+                <input type="tel" id="phone" placeholder="Enter phone number">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="form-control">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm password">
+                <small class="error-message"></small>
+            </div>
+
+            <div class="show-password-container">
+                <input type="checkbox" id="show-password">
+                <label for="show-password">Show Password</label>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
